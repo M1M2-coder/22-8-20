@@ -7,13 +7,13 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${contextRoot}/home">ONLINE SHOPPING</a>
+			<a class="navbar-brand" href="${contextRoot}/home" id="home">ONLINE SHOPPING</a>
 		</div>
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav">
-				<li><a href="${contextRoot}/about">About Us</a></li>
-				<li><a href="${contextRoot}/contact">Contact Us</a></li>
-				<li><a href="${contextRoot}/show/all/products">View Products</a></li>
+				<li id="about"><a href="${contextRoot}/about">About Us</a></li>
+				<li id="contact"><a href="${contextRoot}/contact">Contact Us</a></li>
+				<li id="viewProducts"><a href="${contextRoot}/show/all/products">View Products</a></li>
 			</ul>
 		</div>
 	</div>

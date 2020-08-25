@@ -11,8 +11,9 @@
    						http://www.springframework.org/schema/mvc
    						http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    	
-	<!-- Scanning the Frontend project packages -->
-   	<context:component-scan base-package="com.m2m.onlineshopping.controller" />
+	<!-- Scanning the project packages -->
+   	<context:component-scan base-package="com.m2m.onlineshopping" />
+ 	<context:component-scan base-package="com.m2m.shoppingbackend" />
  
  	<!-- View Resolver -->
  	<!-- Mapping all the logical filenames to their actual physical locations -->

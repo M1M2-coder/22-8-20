@@ -21,11 +21,20 @@
 
 <title>Online Shopping - ${title}</title>
 
+<script type="text/javascript">
+	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}';
+</script>
+
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.css" rel="stylesheet">
 
 <!-- Bootstrap-Readable-Theme CSS -->
 <link href="${css}/bootstrap-read-theme.min.css" rel="stylesheet">
+
+<!-- Bootstrap-DataTable CSS -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
 
 <!-- Add custom CSS here -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -59,6 +68,19 @@
 			</c:if>
 			<!---------------------------------------------------->
 
+			<!-- VIEW PRODUCTS SECTION -->
+			<c:if test="${userClicksShowAllProducts == true or userClicksShowCategoryProducts == true}">
+				<%@include file="./listProducts.jsp"%>
+			</c:if>
+			<!---------------------------------------------------->
+
+			<!-- VIEW SINGLE PRODUCT SECTION -->
+			<c:if test="${userClicksShowProduct == true}">
+				<%@include file="./singleProduct.jsp"%>
+			</c:if>
+			<!---------------------------------------------------->
+
+
 		</div>
 
 		<!-- FOOTER SECTION -->
@@ -73,6 +95,10 @@
 
 		<!-- Readable-Theme-Bootstrap JS -->
 		<script src="${js}/usebootstrap.js"></script>
+		
+		<script type="text/javascript" src="${js}/jquery.dataTables.js"></script>
+		<script type="text/javascript" src="${js}/dataTables.bootstrap.min.js"></script>	
+		<script type="text/javascript" src="${js}/myapp.js"></script>
 	</div>
 </body>
 
